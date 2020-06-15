@@ -4,7 +4,8 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-         "uri":"mongodb+srv://devcordenadas:MGufBdJnIUUgVmsE@cluster0-wvci9.mongodb.net/devcordenadas"
+        "uri": "${process.env.DATABASE_URI}",
+        "database": "${process.env.DATABASE_NAME}"
       },
       "options": {
         "ssl": true

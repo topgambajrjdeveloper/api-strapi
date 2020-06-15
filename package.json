@@ -1,8 +1,8 @@
 {
-  "name": "portfolio-api-strapi",
+  "name": "api-strapi",
   "private": true,
   "version": "0.1.0",
-  "description": "portfolio-api-strapi",
+  "description": "api-strapi",
   "scripts": {
     "dev": "strapi develop",
     "start": "strapi start",
