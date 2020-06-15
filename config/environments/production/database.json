@@ -1,0 +1,17 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+         "uri":"mongodb+srv://devcordenadas:MGufBdJnIUUgVmsE@cluster0-wvci9.mongodb.net/devcordenadas"
+      },
+      "options": {
+        "ssl": true
+      }
+    }
+  }
+
+
+}
+
