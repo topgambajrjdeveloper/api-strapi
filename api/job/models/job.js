@@ -1,5 +1,5 @@
 'use strict';
-
+const axios = require('axios');
 /**
  * Lifecycle callbacks for the `job` model.
  */
@@ -8,7 +8,31 @@ module.exports = {
   // Before saving a value.
   // Fired before an `insert` or `update` query.
   // beforeSave: async (model, attrs, options) => {},
+  afterCreate: async entry => {
+    axios
+      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, {})
+      .catch(() => {
+        // Ignore
+      });
+  },
 
+// Para que se ejecute cada vez que actualizamos un articulo
+afterUpdate: async entry => {
+    axios
+      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, {})
+      .catch(() => {
+        // Ignore
+      });
+  },
+
+// Para que se ejecute cada vez que borramos un articulo
+afterDestroy: async entry => {
+    axios
+      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, {})
+      .catch(() => {
+        // Ignore
+      });
+  },
   // After saving a value.
   // Fired after an `insert` or `update` query.
   // afterSave: async (model, response, options) => {},
